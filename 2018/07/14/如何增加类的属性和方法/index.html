@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Junhao123‘s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="本次例子代码如下： 12345678910111213141516171819202122class Player():  # 定义一个类    def __init__(self, name, hp, occu):        self.__name = name  # 变量被称为属性        self.hp = hp        self.occu = occu    def pri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python笔记之如何增加类的属性和方法">
+<meta property="og:url" content="http://yoursite.com/2018/07/14/如何增加类的属性和方法/index.html">
 <meta property="og:site_name" content="Junhao123‘s Blog">
+<meta property="og:description" content="本次例子代码如下： 12345678910111213141516171819202122class Player():  # 定义一个类    def __init__(self, name, hp, occu):        self.__name = name  # 变量被称为属性        self.hp = hp        self.occu = occu    def pri">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-14T08:53:09.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Junhao123‘s Blog">
+<meta name="twitter:title" content="Python笔记之如何增加类的属性和方法">
+<meta name="twitter:description" content="本次例子代码如下： 12345678910111213141516171819202122class Player():  # 定义一个类    def __init__(self, name, hp, occu):        self.__name = name  # 变量被称为属性        self.hp = hp        self.occu = occu    def pri">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/14/如何增加类的属性和方法/"/>
 
 
 
 
 
-  <title>Junhao123‘s Blog</title>
+  <title>Python笔记之如何增加类的属性和方法 | Junhao123‘s Blog</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/14/如何增加类的属性和方法/" itemprop="url">Python笔记之如何增加类的属性和方法</a></h1>
+          <h1 class="post-title" itemprop="name headline">Python笔记之如何增加类的属性和方法</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <p>本次例子代码如下：</p>
+        <p>本次例子代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Player():  # 定义一个类</span><br><span class="line">    def __init__(self, name, hp, occu):</span><br><span class="line">        self.__name = name  # 变量被称为属性</span><br><span class="line">        self.hp = hp</span><br><span class="line">        self.occu = occu</span><br><span class="line"></span><br><span class="line">    def print_role(self):  # 定义一个类的方法</span><br><span class="line">        print(&apos;%s: %s %s&apos; % (self.__name, self.hp,self.occu))</span><br><span class="line"></span><br><span class="line">    def updateName(self, newName):</span><br><span class="line">        self.__name = newName</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Monster():</span><br><span class="line">    &apos;定义怪物类&apos;</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">user1 = Player(&apos;tom&apos;, 100, &apos;war&apos;)  # 类的实例化</span><br><span class="line">user2 = Player(&apos;jerry&apos;, 200, &apos;master&apos;)</span><br><span class="line">user1.print_role()</span><br><span class="line">user2.print_role()</span><br></pre></td></tr></table></figure>
 <h5 id="添加属性"><a href="#添加属性" class="headerlink" title="添加属性"></a>添加属性</h5><p>添加属性可以在原有的基础上添加，该例子是需要增加新的属性“直接”，也就是“occu”，代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self, name, hp, occu):</span><br><span class="line">	...</span><br><span class="line">	self.occu = occu</span><br></pre></td></tr></table></figure>
@@ -309,8 +308,6 @@
 <h5 id="类的封装"><a href="#类的封装" class="headerlink" title="类的封装"></a>类的封装</h5><p>如果想不通过调用属性，而是只能通过方法修改属性的话，可以对类进行封装，方法是在属性名称前添加两个下划线“__”,如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.__name = name  # 变量被称为属性,通过增加，两个下划线“__”，进行封装</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -327,140 +324,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/14/Python之函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Guo Junhao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Junhao123‘s Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/14/Python之函数/" itemprop="url">Python之函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-14T10:28:15+08:00">
-                2018-07-14
-              </time>
+              <a href="/2018/07/14/Python之函数/" rel="next" title="Python之函数">
+                <i class="fa fa-chevron-left"></i> Python之函数
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h5 id="什么是函数"><a href="#什么是函数" class="headerlink" title="什么是函数"></a>什么是函数</h5><p>Python中函数是最基本一种的代码抽象的方式，用于完成某项特定的任务，可以实现代码的复用。</p>
-<h5 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h5><p>在Python中，定义一个函数需要用到def关键字模板如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def 函数名(参数1，参数2...):</span><br><span class="line"></span><br><span class="line">	代码块</span><br></pre></td></tr></table></figure>
-<p>比如我们以定义一个求和的函数为例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def sum(a,b):</span><br><span class="line">	sum = a + b</span><br><span class="line">	return sum</span><br></pre></td></tr></table></figure>
-<p>定义函数是，需要确定函数名和参数个数，函数内部可以用return返回函数结果，如果函数执行完毕没有return语句是，自动return None。</p>
-<h5 id="函数的可变长参数"><a href="#函数的可变长参数" class="headerlink" title="函数的可变长参数"></a>函数的可变长参数</h5><p>Python中，我们可以定义可变长参数来扩展函数功能，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#取得参数的个数</span><br><span class="line">def howlong(fisrt,*other)</span><br><span class="line">	print(1 + len(other))</span><br><span class="line">print(123,456,789)</span><br></pre></td></tr></table></figure>
-<p>以上程序输出结果是3，参数的长度是可变的，其中first是必须输入的如果不输入first参数，函数就会报错。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -470,10 +355,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -481,6 +367,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -501,8 +391,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -544,6 +443,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加属性"><span class="nav-number">1.</span> <span class="nav-text">添加属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加方法"><span class="nav-number">2.</span> <span class="nav-text">添加方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类的封装"><span class="nav-number">3.</span> <span class="nav-text">类的封装</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -684,6 +599,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
